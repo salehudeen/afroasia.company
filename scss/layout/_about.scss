@@ -1,0 +1,89 @@
+.about-section{
+    padding: 10.5em 0;
+    background-image: url(../img/about.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        display:flex;
+        text-align: left;
+    }
+
+    .about-title-text{
+        h1{
+            margin:.2em 0 0 0;
+            font-size: 3em;
+        }
+        .slogan{
+            font-weight: 300;
+            font-size:1.3em;
+            color: $gray-text;
+        }
+    }
+    .about-info-text{
+        p{
+            padding-top:.9em;
+            color:$gray-text;
+            font-size: 1.2em;
+        }
+    }
+    .button{
+        margin-top:2em;
+        font-size:1em;
+        padding: 1em 1.5em;
+        border-radius: 5px;
+        border-style: none;
+        background: $yellow-main;
+        font-weight: 900;
+        &:hover{
+            background:#000;
+        }
+    }
+}
+@media (max-width:62rem ){
+    .about-section{
+        padding: 7.5em 0;
+        .container{
+            flex-direction: column;
+        }
+        .about-title-text, .about-info-text{
+            width:100%;
+        }
+    }
+
+}
+@media (max-width:32rem ){
+
+    .about-section{
+        padding: 5em 0;
+    
+        .about-title-text{
+            h1{
+                font-size: 2em;
+            }
+            .slogan{
+                font-size:1.1em;
+            }
+        }
+        .about-info-text{
+            p{
+                font-size: 1em;
+            }
+        }
+        .button{
+            font-size:1em;
+        }
+    }
+
+}
+
+.no-flexbox .about-section{
+    .container > div{
+        display:inline-block;
+    }
+    .about-info-text{
+        float:right;
+    }
+    
+
+}
